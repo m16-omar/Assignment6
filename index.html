@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Aerten</div>
+            <ul class="nav">
+                <li class="nav-item">Dashboard</li>
+                <li class="nav-item active">Roles</li>
+                <li class="nav-item">Employees</li>
+                <li class="nav-item">Payroll</li>
+                <li class="nav-item">Reports</li>
+                <li class="nav-item">Settings</li>
+            </ul>
+            <button class="logout">Log out</button>
+        </aside>
+
+        <main class="main-content">
+            <section id="roles-section" class="roles-section">
+                <header>
+                    <h1>Roles</h1>
+                    <div class="roles-controls">
+                        <input type="text" placeholder="Search Roles by Title, Teams or any related keywords" class="search-bar">
+                        <button class="assign-btn">Assign</button>
+                        <button class="new-role-btn">New Role</button>
+                    </div>
+                </header>
+                <div class="roles-list">
+                    <div class="role-card">
+                        <h2>Solution Sales Specialist</h2>
+                        <p>Responsible for driving revenue growth by identifying and pursuing new business opportunities, as well as maintaining relationships with existing clients...</p>
+                        <div class="tags">
+                            <span>Marketing</span>
+                            <span>Product</span>
+                            <span>Engineering</span>
+                            <span>Design</span>
+                        </div>
+                        <div class="manager-info">
+                            <span>James Campion</span>
+                        </div>
+                    </div>
+                    <!-- Repeat .role-card for other roles -->
+                </div>
+            </section>
+
+            <section id="employees-section" class="employees-section">
+                <header>
+                    <h1>Employees</h1>
+                    <div class="employees-controls">
+                        <input type="text" placeholder="Search Employee by name, role, ID or any related keywords" class="search-bar">
+                        <button class="filter-btn">Filter</button>
+                    </div>
+                </header>
+                <table class="employees-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Employee ID</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Teams</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tanner Finsha</td>
+                            <td>#23454GH6JYT6</td>
+                            <td>Product Designer</td>
+                            <td>Active</td>
+                            <td>Marketing, Design</td>
+                        </tr>
+                        <!-- Repeat <tr> for other employees -->
+                    </tbody>
+                </table>
+            </section>
+
+            <div id="assign-role-modal" class="assign-role-modal">
+                <h2>Assign this role</h2>
+                <input type="text" placeholder="Search for an individual or team">
+                <ul class="employee-list">
+                    <li>
+                        <input type="radio" name="employee" id="employee1">
+                        <label for="employee1">Jennifer Lopez - Product Designer, Integrations</label>
+                    </li>
+                    <!-- Repeat for other employees -->
+                </ul>
+                <button class="assign-btn">Assign</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="./css/scripts.js"></script>
+</body>
+</html>
